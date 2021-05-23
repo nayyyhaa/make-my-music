@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMyMusic</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clap-track">
+            <div class="controls">
+                <h1>Clap Track</h1>
+                <button data-track="0" class="mute clap-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="clap-select" id="clap-select">
+                    <option value="./assets/beats/clap-analog">Clap Analog</option>
+                    <option value="./assets/beats/clap-crushed">Clap Crushed</option>
+                </select>
+            </div>
+            <div class="clap-pads">
+                <div class="pad clap-pad b0"></div>
+                <div class="pad clap-pad b1"></div>
+                <div class="pad clap-pad b2"></div>
+                <div class="pad clap-pad b3"></div>
+                <div class="pad clap-pad b4"></div>
+                <div class="pad clap-pad b5"></div>
+                <div class="pad clap-pad b6"></div>
+                <div class="pad clap-pad b7"></div>
+            </div>
+        </div>
+        <div class="hithat-track">
+            <div class="controls">
+                <h1>Hithat Track</h1>
+                <button data-track="0" class="mute clap-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="hithat-select" id="hithat-select">
+                    <option value="./assets/beats/hithat-dist01">hithat Dist01</option>
+                    <option value="./assets/beats/hithat-dist02">hithat Dist02</option>
+                </select>
+            </div>
+            <div class="hithat-pads">
+                <div class="pad hithat-pad b0"></div>
+                <div class="pad hithat-pad b1"></div>
+                <div class="pad hithat-pad b2"></div>
+                <div class="pad hithat-pad b3"></div>
+                <div class="pad hithat-pad b4"></div>
+                <div class="pad hithat-pad b5"></div>
+                <div class="pad hithat-pad b6"></div>
+                <div class="pad hithat-pad b7"></div>
+            </div>
+        </div>
+        <div class="kick-track">
+            <div class="controls">
+                <h1>Kick Track</h1>
+                <button data-track="0" class="mute kick-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="kick-select" id="clap-select">
+                    <option value="./assets/beats/kick-softy">Clap Softy</option>
+                    <option value="./assets/beats/kick-stomp">Clap Stomp</option>
+                </select>
+            </div>
+            <div class="kick-pads">
+                <div class="pad kick-pad b0"></div>
+                <div class="pad kick-pad b1"></div>
+                <div class="pad kick-pad b2"></div>
+                <div class="pad kick-pad b3"></div>
+                <div class="pad kick-pad b4"></div>
+                <div class="pad kick-pad b5"></div>
+                <div class="pad kick-pad b6"></div>
+                <div class="pad kick-pad b7"></div>
+            </div>
+        </div>
+        <button class="play">Play!</button>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+      integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
