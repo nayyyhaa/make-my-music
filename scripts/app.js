@@ -6,6 +6,7 @@ class MusicTable {
         this.hihatAudio = document.querySelector(".hihat-sound")
         this.kickAudio = document.querySelector(".kick-sound")
         this.muteBtns = document.querySelectorAll(".mute");
+        this.selectOptions = document.querySelectorAll("select");
         this.index = 0;
         this.bpm = 150;
         this.isPlaying = null;
@@ -72,6 +73,16 @@ class MusicTable {
             }
         }
     }
+
+    selectedPlay(e){
+        let beatName = e.target.name;
+        let beatValue = e.target.value;
+        switch(beatName) {
+                case "clap-select": this.clapAudio.src = `${beatValue}.wav`; break;
+                case "hihat-select": this.hihatAudio.src = `${beatValue}.wav`; break;
+                case "kick-select": this.kickAudio.src = `${beatValue}.wav`; break;
+            }
+    }
 }
 
 const musicTable = new MusicTable();
@@ -95,3 +106,9 @@ musicTable.muteBtns.forEach( muteBtn => {
         musicTable.muteUnumte(e);
     })
 });
+
+musicTable.selectOptions.forEach( option => {
+    option.addEventListener("change", function(e) {
+        musicTable.selectedPlay(e);
+    })
+})
