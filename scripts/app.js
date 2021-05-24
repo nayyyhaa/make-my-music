@@ -7,6 +7,7 @@ class MusicTable {
         this.kickAudio = document.querySelector(".kick-sound")
         this.muteBtns = document.querySelectorAll(".mute");
         this.selectOptions = document.querySelectorAll("select");
+        this.tempoSlider = document.querySelector(".tempo-slider");
         this.index = 0;
         this.bpm = 150;
         this.isPlaying = null;
@@ -74,7 +75,7 @@ class MusicTable {
         }
     }
 
-    selectedPlay(e){
+    selectedPlay(e) {
         let beatName = e.target.name;
         let beatValue = e.target.value;
         switch(beatName) {
@@ -82,6 +83,18 @@ class MusicTable {
                 case "hihat-select": this.hihatAudio.src = `${beatValue}.wav`; break;
                 case "kick-select": this.kickAudio.src = `${beatValue}.wav`; break;
             }
+    }
+
+    changeTempo(e) {
+        this.bpm = e.target.value;
+        if(this.isPlaying){
+            clearInterval(this.isPlaying);
+            this.isPlaying = null;
+            this.play();
+        }
+    }
+    updateTempoVal(e) {
+        document.querySelector(".tempo-num").innerText = e.target.value;
     }
 }
 
@@ -111,4 +124,11 @@ musicTable.selectOptions.forEach( option => {
     option.addEventListener("change", function(e) {
         musicTable.selectedPlay(e);
     })
+})
+
+musicTable.tempoSlider.addEventListener("input", function(e) {
+    musicTable.changeTempo(e);
+})
+musicTable.tempoSlider.addEventListener("change", function(e) {
+    musicTable.updateTempoVal(e);
 })

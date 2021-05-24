@@ -38,6 +38,16 @@ svg {
     cursor: pointer;
     transition: all 0.5s ease;
 }
+select {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.mute.active {
+    background: rgb(182, 182, 182);
+}
+
+/*Pads*/
 
 .pad{
     height: 4rem;
@@ -70,14 +80,28 @@ svg {
 .kick-pad.active {
     background: rgb(253, 166, 67);
 }
-select {
-    padding: 1rem;
-    font-size: 1rem;
+
+/*Tempo*/
+
+.tempo {
+    width: 30%;
+}
+.tempo-slider {
+    margin: 2rem 0 1rem;
+    padding: 0.2rem;
+    -webkit-appearance: none;
+    background: rgb(88, 88, 88);
+    width:100%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.tempo p {
+    font-size: 1.5rem;
+    text-align: center;
 }
 
-.mute.active {
-    background: rgb(182, 182, 182);
-}
+/*Play*/
+
 .play {
     padding: 1rem 2rem;
     font-size: 1.5rem;
@@ -90,6 +114,8 @@ select {
 .play.active {
     background: rgb(37, 37, 37);
 }
+
+/*animation*/
 @keyframes playTrack {
     from {
         transform: scale(1);
