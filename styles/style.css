@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *,*::before,*::after{
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Poppins',
+    sans-serif;
 }
 i,
 svg {
     pointer-events: none;
+}
+header {
+    text-align: center;
+    font-size:1rem;
+    font-weight: bold;
+    margin-top: 3rem;
 }
 .container{
     min-height: 100vh;
@@ -17,16 +26,14 @@ svg {
 .clap-track,.hihat-track,.kick-track{
     display: flex;
     align-items: center;
-    width: 70%;
     justify-content: space-between;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 .controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex: 1;
-    margin: 0rem 2rem;
 }
 .controls button {
     padding: 1rem;
@@ -58,6 +65,7 @@ select {
 }
 .clap-pads,.hihat-pads,.kick-pads{
     display: flex;
+    margin: auto;
 }
 .clap-pad {
     background: rgb(247, 193, 202);
@@ -84,7 +92,7 @@ select {
 /*Tempo*/
 
 .tempo {
-    width: 30%;
+    width: 40%;
 }
 .tempo-slider {
     margin: 2rem 0 1rem;
@@ -109,7 +117,7 @@ select {
     color: white;
     border: none;
     cursor: pointer;
-    margin-top: 3rem;
+    margin: 2rem 0;
 }
 .play.active {
     background: rgb(37, 37, 37);
@@ -122,5 +130,45 @@ select {
     }
     to {
         transform: scale(1.2);
+    }
+}
+
+/*Media Queries*/
+
+@media screen and (max-width:750px) {
+    header {
+        margin-top: 1.5rem;
+    }
+    header h1{
+        font-size:1.5rem;
+    }
+    .controls h1{
+        font-size:1rem;
+    }
+    .controls button {
+        padding: 0.4rem;
+        margin: 0 0 0 0.5rem;
+    }
+    .clap-track,
+    .hihat-track,
+    .kick-track {
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+    .pad {
+        height: 2rem;
+        width: 2rem;
+        margin: 0.25rem;
+    }
+    .tempo {
+        width: 70%;
+    }
+    .tempo p {
+        font-size: 0.75rem;
+    }
+    .play {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        margin: 1rem 0;
     }
 }
