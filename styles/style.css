@@ -14,7 +14,7 @@ svg {
     justify-content: center;
     align-items: center;
 }
-.clap-track,.hithat-track,.kick-track{
+.clap-track,.hihat-track,.kick-track{
     display: flex;
     align-items: center;
     width: 70%;
@@ -46,13 +46,13 @@ svg {
     cursor: pointer;
     transition: all 0.5s ease;
 }
-.clap-pads,.hithat-pads,.kick-pads{
+.clap-pads,.hihat-pads,.kick-pads{
     display: flex;
 }
 .clap-pad {
     background: rgb(247, 193, 202);
 }
-.hithat-pad {
+.hihat-pad {
     background: rgb(184, 219, 243);
 }
 .kick-pad {
@@ -63,7 +63,7 @@ svg {
     background: rgb(247, 90, 116);
 }
 
-.hithat-pad.active {
+.hihat-pad.active {
     background: rgb(96, 185, 245);
 }
 
@@ -86,4 +86,15 @@ select {
     border: none;
     cursor: pointer;
     margin-top: 3rem;
+}
+.play.active {
+    background: rgb(37, 37, 37);
+}
+@keyframes playTrack {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
 }
